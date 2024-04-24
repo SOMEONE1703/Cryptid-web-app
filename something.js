@@ -8,7 +8,8 @@ fetch('./maps/intro/intro_1A2B3670694207638A.json')
         }
         return response.json();
     })
-    .then(data => {
+    .then(data => 
+        
         // Handle the JSON data here
         const code= data.mapCode;
         console.log(code);
