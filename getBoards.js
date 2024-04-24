@@ -16,7 +16,8 @@ async function getAllJsons(pressed) {
         // Extract the file name from the HTML anchor tag
         const regex = /\/([^\/]+\.json)/;
         const match = fileName.match(regex);
-        return match ? match[1] : null; 
+        if(pressed=='intro') return match ? match[1].slice(0,27+2) : null; 
+        return match ? match[1].slice(0,27) : null; 
     });
 
     fileNames.forEach((fileName, index, array) => {
